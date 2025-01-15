@@ -1,28 +1,40 @@
 {
   "expo": {
-    "name": "TRCApp",
-    "slug": "TRCApp",
+    "name": "TRCAPP",
+    "slug": "trcapp",
     "version": "1.0.0",
     "orientation": "portrait",
+    "platforms": ["ios", "android", "web"],
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
+    "updates": {
+      "enabled": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "TRCAPP needs access to your camera to upload photos.",
+        "NSPhotoLibraryUsageDescription": "TRCAPP needs access to your photo library to upload photos.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to show nearby offices."
       }
     },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "serviceWorker": {
+        "src": "./service-worker.js"
+      }
     }
   }
 }

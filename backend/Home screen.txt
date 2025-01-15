@@ -1,0 +1,52 @@
+Home screen 
+
+
+import React from 'react';
+import { View, Text, Button, TextInput, StyleSheet, Image } from 'react-native';
+
+export default function HomeScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      {/* Logo */}
+      <Image
+  source={require('../assets/logo.jpeg')} 
+  style={styles.logo}
+  resizeMode="contain"
+/>
+
+      {/* Input Fields */}
+      <TextInput style={styles.input} placeholder="First Name" />
+      <TextInput style={styles.input} placeholder="Last Name" />
+      <TextInput style={styles.input} placeholder="Create a Password" secureTextEntry />
+      {/* Navigation Button */}
+      <Button
+        title="Next"
+        onPress={() => navigation.navigate('About')}
+        color="#FFA500"
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 50, // Add padding to position content below the status bar
+    backgroundColor: '#fff',
+  },
+  logo: {
+    width: 150, // Adjust width as needed
+    height: 150, // Adjust height as needed
+    marginBottom: 20, // Space between the logo and input fields
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    marginVertical: 10,
+    width: 300,
+    borderRadius: 5,
+  },
+});
