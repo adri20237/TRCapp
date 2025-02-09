@@ -41,18 +41,21 @@ export default function HomeScreen({ navigation }) {
       <TextInput
         style={styles.input}
         placeholder="First Name"
+        placeholderTextColor="#FFA500"
         value={firstName}
         onChangeText={setFirstName}
       />
       <TextInput
         style={styles.input}
         placeholder="Last Name"
+        placeholderTextColor="#FFA500"
         value={lastName}
         onChangeText={setLastName}
       />
       <TextInput
         style={styles.input}
         placeholder="Email Address"
+        placeholderTextColor="#FFA500"
         value={email}
         onChangeText={setEmail}
         keyboardType="email-address"
@@ -60,6 +63,7 @@ export default function HomeScreen({ navigation }) {
       <TextInput
         style={styles.input}
         placeholder="Create a Password"
+        placeholderTextColor="#FFA500"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
@@ -67,6 +71,7 @@ export default function HomeScreen({ navigation }) {
       <TextInput
         style={styles.input}
         placeholder="Confirm Password"
+        placeholderTextColor="#FFA500"
         value={confirmPassword}
         onChangeText={setConfirmPassword}
         secureTextEntry
@@ -95,13 +100,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 50, // Add padding to position content below the status bar
+    paddingTop: 50,
     backgroundColor: '#fff',
   },
   logo: {
-    width: 150, // Adjust width as needed
-    height: 150, // Adjust height as needed
-    marginBottom: 20, // Space between the logo and input fields
+    width: 150,
+    height: 150,
+    marginBottom: 20,
   },
   input: {
     borderWidth: 1,
@@ -110,10 +115,11 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: 300,
     borderRadius: 5,
+    fontSize: 16,
   },
   forgotPasswordLink: {
     marginTop: 20,
-    color: 'blue',
+    color: '#FFA500',
     textDecorationLine: 'underline',
   },
 });
